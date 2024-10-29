@@ -1,7 +1,8 @@
 const { produtos } = require("./produto");
 
-function deletarProduto(id) {
+function deletarProdutos() {
     try {
+
         const indice = produtos.findIndex(elementodoarray =>
          elementodoarray.id === id
         )
@@ -11,11 +12,11 @@ function deletarProduto(id) {
             produtos.splice(indice, 1)
             console.log("produto deletado com sucesso!")
         }
-
+    
     } catch (error) {
         console.error("Erro ao excluir produto",error.message)
-
+    
     }
 }
 
-module.exports = { deletarProduto };
+module.exports = { deletarProdutos };
